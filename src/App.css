@@ -23,10 +23,34 @@
   color: #61dafb;
 }
 
+.title {
+  text-align: center;
+  font-size: 8vw;
+}
+
+.blog-title {
+  text-align: center;
+  font-size: 6vw;
+}
+
+.author-title {
+  text-align: center;
+  font-size: 4vw;
+}
+
+.container,
+.post-flex,
+.comment-flex {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

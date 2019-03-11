@@ -1,25 +1,27 @@
-import React, { Component } from 'react';
+import React, {
+  Component
+} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import BlogPost from './BlogPost'
 class App extends Component {
   render() {
+    const { posts } = this.props
+
+
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        <h1 className="title">Ned's Blog</h1>
+        {
+          posts.map((post, index) =>
+            <BlogPost key={index} post={post} />
+          )
+        }
+        {/* <BlogPost post={posts[0]} />
+        <BlogPost post={posts[1]} />
+        <BlogPost post={posts[2]} /> */}
       </div>
     );
   }
